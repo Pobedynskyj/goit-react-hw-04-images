@@ -1,16 +1,11 @@
+import { fetchImg } from './service/api';
+import { useState } from 'react';
+
 export const App = () => {
-  return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
-  );
+  const [search, setSearch] = useState('');
+  const [page, setPage] = useState(1);
+  const [allImages, setAllImages] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  return <div></div>;
 };
