@@ -20,7 +20,7 @@ const Modal = ({ closeModal, image }) => {
   return (
     <div className={s.overlay} onClick={handleBackdropClick}>
       <div className={s.modal}>
-        <img src={image} alt="" className={s.modalImg} />
+        <img src={image} alt="img" className={s.modalImg} />
       </div>
     </div>
   );
