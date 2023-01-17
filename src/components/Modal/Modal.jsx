@@ -3,15 +3,15 @@ import { useEffect } from 'react';
 
 const Modal = ({ closeModal, image }) => {
   useEffect(() => {
+    const handleCloseModal = e => {
+      if (e.code === 'Escape') {
+        closeModal();
+      }
+    };
     window.addEventListener('keydown', handleCloseModal);
     return () => window.removeEventListener('keydown', handleCloseModal);
   }, []);
 
-  const handleCloseModal = e => {
-    if (e.code === 'Escape') {
-      closeModal();
-    }
-  };
   const handleBackdropClick = e => {
     if (e.currentTarget === e.target) {
       closeModal();
