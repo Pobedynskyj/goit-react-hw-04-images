@@ -1,5 +1,6 @@
 import s from './Modal.module.css';
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const Modal = ({ closeModal, image }) => {
   useEffect(() => {
@@ -26,3 +27,8 @@ const Modal = ({ closeModal, image }) => {
   );
 };
 export default Modal;
+
+Modal.propTypes = {
+  closeModal: PropTypes.func.isRequired,
+  image: PropTypes.string.isRequired,
+};

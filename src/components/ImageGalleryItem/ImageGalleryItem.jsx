@@ -1,6 +1,7 @@
 import Modal from 'components/Modal';
 import { useState } from 'react';
 import s from './ImageGalleryItem.module.css';
+import PropTypes from 'prop-types';
 
 const ImageGalleryItem = ({ item, largeImg }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,6 +13,8 @@ const ImageGalleryItem = ({ item, largeImg }) => {
   const handleModalClose = () => {
     setIsModalOpen(false);
   };
+  console.log(item);
+  console.log(largeImg);
 
   return (
     <>
@@ -32,3 +35,8 @@ const ImageGalleryItem = ({ item, largeImg }) => {
 };
 
 export default ImageGalleryItem;
+
+ImageGalleryItem.propTypes = {
+  item: PropTypes.string.isRequired,
+  largeImg: PropTypes.string.isRequired,
+};
